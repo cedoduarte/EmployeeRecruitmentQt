@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>573</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema de contratación de empleados</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Puesto de trabajo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="JobCombo" name="jobCombo"/>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" colspan="3">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Habilidades específicas</string>
+       </property>
+      </widget>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>270</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>270</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="OperationManagerSkillList" name="operationManagerSkillList"/>
+       <widget class="SecurityBossSkillList" name="securityBossSkillList"/>
+       <widget class="ElectricalTechnicianSkillList" name="electricalTechnicianSkillList"/>
+       <widget class="OperatorSkillList" name="operatorSkillList"/>
+       <widget class="MaintenanceBossSkillList" name="maintenanceBossSkillList"/>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Años de experiencia</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="ExperienceCombo" name="yearsOfExperienceCombo"/>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0" colspan="3">
+     <layout class="QFormLayout" name="formLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Cantidad de proyectos realizados</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="IntegerCombo" name="projectCountCombo"/>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="saveRecordButton">
+      <property name="text">
+       <string>Registrar</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="showRecordsButton">
+      <property name="text">
+       <string>Ver registros</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>335</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <layout class="QFormLayout" name="formLayout_3">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Grado de titulación</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="ProfessionalDegreeCombo" name="professionalDegreeCombo"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>573</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ExperienceCombo</class>
+   <extends>QComboBox</extends>
+   <header location="global">experiencecombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ProfessionalDegreeCombo</class>
+   <extends>QComboBox</extends>
+   <header location="global">professionaldegreecombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>IntegerCombo</class>
+   <extends>QComboBox</extends>
+   <header location="global">integercombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>JobCombo</class>
+   <extends>QComboBox</extends>
+   <header location="global">jobcombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ElectricalTechnicianSkillList</class>
+   <extends>QWidget</extends>
+   <header location="global">electricaltechnicianskilllist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>OperationManagerSkillList</class>
+   <extends>QWidget</extends>
+   <header location="global">operationmanagerskilllist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>OperatorSkillList</class>
+   <extends>QWidget</extends>
+   <header location="global">operatorskilllist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SecurityBossSkillList</class>
+   <extends>QWidget</extends>
+   <header location="global">securitybossskilllist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MaintenanceBossSkillList</class>
+   <extends>QWidget</extends>
+   <header location="global">maintenancebossskilllist.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
